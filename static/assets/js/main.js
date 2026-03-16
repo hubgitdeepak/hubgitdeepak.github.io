@@ -11,6 +11,7 @@
   /**
    * Easy selector helper function
    */
+  
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -225,8 +226,43 @@
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
-    selector: '.portfokio-lightbox'
+    selector: '.portfolio-lightbox'
   });
+  
+
+  /**
+ * Gallery slider
+ */
+new Swiper('.gallery-slider', {
+  speed: 600,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    992: {
+      slidesPerView: 3
+    },
+    1200: {
+      slidesPerView: 4
+    }
+  }
+});
+
+
 
   /**
    * Portfolio details slider
@@ -243,6 +279,10 @@
       clickable: true
     }
   });
+  
+  const galleryLightbox = GLightbox({
+  selector: '.glightbox'
+   });
 
   /**
    * Testimonials slider
