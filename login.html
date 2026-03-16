@@ -45,26 +45,27 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
+    <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="static/assets/img/KTPL_LOGO1.png" alt="">
-        <span>Kompankotech</span>
+      <a href="home.html" class="logo d-flex align-items-center">
+        <img src="static/assets/img/Homi Logo.png" alt="">
+        <span>Homi Energy Loop</span>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul id="navList">
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About us</a></li>
-          <li class="dropdown"><a href="#"><span>Solutions</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="home.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About us</a></li>
+          <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a>AI Solutions</a></li>
-              <li><a>IoT Solutions</a></li>
-              <li><a>Power Converter Solutions</a></li>
-              <li><a>Motor Controller Solutions</a></li>
+              <li><a>Dual Active Bridge Converters</a></li>
+              <li><a>Battery Management Systems</a></li>
+              <li><a>Power Factor Converters</a></li>
+              <li><a>Active Frontend Converters</a></li>
+              <li><a>Motor Control Solutions</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <span id="userMenu"></span>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -95,125 +96,34 @@
     </div>
   </section>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="static/assets/img/KTPL_LOGO1.png" alt="">
-              <span>Kompankotech</span>
-            </a>
-            <p>Follow us in social media.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Solutions</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i><a>AI Solutions</a></li>
-              <li><i class="bi bi-chevron-right"></i><a>IoT Solutions</a></li>
-              <li><i class="bi bi-chevron-right"></i><a>Power Converter Solutions</a></li>
-              <li><i class="bi bi-chevron-right"></i><a>Motor Controller Solutions</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              Nadia <br>
-              West Bengal 741245<br>
-              India <br><br>
-              <strong>Phone:</strong> +91 9732990757<br>
-              <strong>Email:</strong> kompanko22@gmail.com<br>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+   <footer id="footer" class="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Homi Energy Loop.</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Homi Energy Loop LLP.</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
     </div>
   </footer>
-  <!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Vendor JS -->
   <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="static/assets/js/main.js"></script>
 
-  <!-- ======= Dynamic Login Script ======= -->
+  <!-- ======= Dynamic + Contact JS ======= -->
   <script>
-    const API_URL = "https://api.ktpl.in"; // your FastAPI backend
+    const API_URL = "https://api.ktpl.in"; // your backend
 
-    // --- Flash messages ---
-    const flashMessage = localStorage.getItem("flash");
-    if (flashMessage) {
-      document.getElementById("flash").innerHTML = `<div class="flash">${flashMessage}</div>`;
-      localStorage.removeItem("flash");
-    }
-
-    // --- Handle login ---
-    document.getElementById("loginForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value.trim();
-
-      try {
-        const res = await fetch(`${API_URL}/login`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username, password })
-        });
-        const data = await res.json();
-
-        if (res.ok) {
-          localStorage.setItem("username", username);
-          localStorage.setItem("flash", "Login successful!");
-          window.location.href = "index.html";
-        } else {
-          document.getElementById("flash").innerHTML =
-            `<div class="flash">${data.detail || "Invalid credentials."}</div>`;
-        }
-      } catch (err) {
-        document.getElementById("flash").innerHTML =
-          `<div class="flash">Server not reachable.</div>`;
-      }
-    });
-
-    // --- User Menu in Navbar ---
+    // --- User Menu ---
     const userMenu = document.getElementById("userMenu");
-    const user = localStorage.getItem("username");
-    if (user) {
+    const username = localStorage.getItem("username");
+    if (username) {
       userMenu.innerHTML = `
         <li class="dropdown">
-          <a href="#"><span>Hello ${user}</span> <i class="bi bi-chevron-down"></i></a>
+          <a href="#"><span>Hello ${username}</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="#" id="logoutBtn">Logout</a></li>
@@ -223,13 +133,52 @@
       userMenu.innerHTML = `<li><a class="getstarted scrollto" href="login.html">Log in</a></li>`;
     }
 
-    // --- Logout handler ---
     document.addEventListener("click", (e) => {
       if (e.target && e.target.id === "logoutBtn") {
         e.preventDefault();
         localStorage.removeItem("username");
         localStorage.setItem("flash", "You have been logged out.");
-        window.location.href = "index.html";
+        window.location.href = "home.html";
+      }
+    });
+
+    // --- Contact Form ---
+    const form = document.getElementById("contactForm");
+    const loading = document.querySelector(".loading");
+    const errorMsg = document.querySelector(".error-message");
+    const successMsg = document.querySelector(".sent-message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      loading.style.display = "block";
+      errorMsg.textContent = "";
+      successMsg.textContent = "";
+
+      const payload = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+      };
+
+      try {
+        const res = await fetch(`${API_URL}/contact`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          successMsg.textContent = data.message || "Message sent successfully!";
+          form.reset();
+        } else {
+          errorMsg.textContent = data.detail || "Failed to send message.";
+        }
+      } catch (err) {
+        errorMsg.textContent = "Server not reachable.";
+      } finally {
+        loading.style.display = "none";
       }
     });
   </script>
